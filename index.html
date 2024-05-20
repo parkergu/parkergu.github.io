@@ -262,27 +262,10 @@
             The robotic manipulation of deformable linear objects (DLOs) has broad applications, e.g., manufacturing and medical surgery. To complete such tasks, an accurate dynamics model for predicting the deformation is critical. However, due to the infinite dimensionality of the state space of DLOs and the complexity of their dynamics, it is hard to obtain accurate dynamics models theoretically. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            Interaction Network (IN), which is based on Graph Neural Network (GNN), have succeeded in learning to model the dynamics of DLOs. However, it only considers local information in the graph at every time step and cannot handle instantaneous propagation of effects. In this paper, we adopt the IN dynamics model for capturing the interaction between neighboring segments in a DLO and use an attention mechanism to propagate interaction effects along the DLO. The learned dynamics model can then be coupled with Model Predictive Control (MPC) algorithms to enable a robot to plan behaviors for shape control of the DLO. 
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Evaluation of our dynamics model with synthetic and newly collected real-world data shows better accuracy in short-term and long-term predictions than existing methods both in the simulation and the real world. Experiments also demonstrate that the MPC framework with the proposed dynamics model can handle various challenging shaping tasks both in the simulation and the real world.
           </p>
         </div>
       </div>
