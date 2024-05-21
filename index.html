@@ -380,6 +380,15 @@
                alt="Trajectory Optimization under MPC Framework"/>
           <p>Trajectory Optimization under MPC Framework</p>
         </div>
+
+        <div class="content has-text-justified">
+          <p>
+            The learned dynamics model is naturally differentiable. Given the model and a desired goal, we can perform forward simulation, optimizing the control inputs by minimizing a loss between simulated results and the goal.
+          </p>
+          <p>
+            The MPC is used to stabilize the trajectory by doing forward simulation at every time step as a way to compensate the simulation error
+          </p>
+        </div>
         
 
         <!-- Re-rendering. -->
