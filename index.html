@@ -348,6 +348,7 @@
                  alt="Interaction Network"/>
             <p>Interaction Network (IN)</p>
           </div>
+
           <!-- <div class="column interpolation-video-column">
             <div id="interpolation-image-wrapper">
               Loading...
@@ -356,6 +357,7 @@
                    id="interpolation-slider"
                    step="1" min="0" max="100" value="0" type="range">
           </div> -->
+
           <div class="column is-6 has-text-centered">
             <img src="./static/images/fig3_dynamics model_b.png"
                  class="interpolation-image"
@@ -363,6 +365,7 @@
             <p>Proposed Method</p>
           </div>
         </div>
+
         <div class="content has-text-justified">
           <p>
             IN: IN defines a flexible and efficient model for explicit reasoning of objects and their relations in a complex system. However, the main limitation of IN is that at every time step t, it only considers local information in the graph and cannot handle instantaneous propagation of effects.
@@ -390,6 +393,20 @@
           </p>
         </div>
         
+        <h2 class="title is-3">Real-world Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            A Kinova Gen3 robot manipulates one end of a DLO to different desired shapes, and the other end is fixed. In real-world experiments, the DLO is a 0.5-m USB cable and characterized by 8 features (red markers). An Intel Realsense D435 RGBD camera is utilized to obtain the positions of features of the DLO at 15Hz and 1280 x 720 resolution.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/fig4_real-world setup.png"
+               class="interpolation-image"
+               alt="Real-world Setup"/>
+          <p>Trajectory Optimization under MPC Framework</p>
+        </div>
+
+      
 
         <!-- Re-rendering. -->
         <h3 class="title is-4">Re-rendering the input video</h3>
