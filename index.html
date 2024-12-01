@@ -53,7 +53,6 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Learning Graph Dynamics with Interaction Effects Propagation for Deformable Linear Objects Shape Control</h1>
           <div class="is-size-5 publication-authors">
-            
             <!-- <span class="author-block">
               <a>Feida Gu</a><sup>1</sup>,</span> -->
             <!-- <span class="author-block">
@@ -148,18 +147,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The robotic manipulation of deformable linear objects (DLOs) has broad applications, e.g., manufacturing and medical surgery. To complete such tasks, an accurate dynamics model for predicting the deformation is critical. However, due to the infinite dimensionality of the state space of DLOs and the complexity of their dynamics, it is hard to obtain accurate dynamics models theoretically. 
+            Robotic manipulation of deformable linear objects (DLOs) has broad application prospects, e.g., manufacturing and medical surgery. To achieve such tasks, a critical challenge is the precise control of the DLOs’ shapes, which requires an accurate dynamics model for deformation prediction. However, due to the infinite dimensionality of the DLOs and the complexity of their deformation mechanism, dynamics models are hard to theoretically calculate.
           </p>
           <p>
-            Interaction Network (IN), which is based on Graph Neural Network (GNN), have succeeded in learning to model the dynamics of DLOs. However, it only considers local information in the graph at every time step and cannot handle instantaneous propagation of effects. In this paper, we adopt the IN dynamics model for capturing the interaction between neighboring segments in a DLO and use an attention mechanism to propagate interaction effects along the DLO. The learned dynamics model can then be coupled with Model Predictive Control (MPC) algorithms to enable a robot to plan behaviors for shape control of the DLO. 
+            In this paper, for representing the DLO, we use multiple particles being uniformly distributed along the DLO. For learning the dynamics model, we adopt Graph Neural Network (GNN) to learn interaction effects between neighbouring particles, and use the attention mechanism to aggregate the effects of these interactions for the purpose of effect propagation along the DLO (called GA-Net). For manipulation, the Model Predictive Control (MPC) coupled with the learned dynamics model is used to calculate the optimal robot movements, which can also generalize to unseen DLOs.
           </p>
           <p>
-            Evaluation of our dynamics model with synthetic and newly collected real-world data shows better accuracy in short-term and long-term predictions than existing methods both in the simulation and the real world. Experiments also demonstrate that the MPC framework with the proposed dynamics model can handle various challenging shaping tasks both in the simulation and the real world.
+            Simulation and real-world experiments demonstrate that GA-Net shows better accuracy than existing methods, and the proposed control framework is effective for different DLOs. Specifically, for model prediction (150 steps), the prediction performance of GA-Net is 12.02% better than the strong baseline (IN-BiLSTM).
           </p>
         </div>
       </div>
     </div>
-
+    
+   
     <div class="content has-text-centered">
       <img src="./static/images/overview.png"
         class="interpolation-image"
